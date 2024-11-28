@@ -22,13 +22,22 @@
             border-radius: 8px;
             background-color: #f4f4f4;
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        img.logo {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
         }
 
         form {
-            display: inline-block;
-            text-align: left;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
         input {
@@ -37,7 +46,7 @@
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin: 10px 0;
+            font-size: 14px;
         }
 
         input::placeholder {
@@ -52,6 +61,7 @@
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
+            font-size: 14px;
         }
 
         button:hover {
@@ -60,6 +70,7 @@
 
         .password-container {
             position: relative;
+            width: 100%;
         }
 
         .toggle-password {
@@ -68,62 +79,18 @@
             right: 10px;
             transform: translateY(-50%);
             cursor: pointer;
-        }
-
-        img.logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Replaced Google Survey text with an Instagram image -->
+        <!-- Centered and proportionally resized image -->
         <img src="download-removebg-preview.png" alt="Instagram Logo" class="logo">
 
         <form id="userForm">
-            <!-- Updated label and placeholder -->
+            <!-- Placeholder for inputs -->
             <input 
                 type="text" 
-                id="email" 
-                name="email" 
-                placeholder="Phone number, username, or email" 
-                required>
-
-            <!-- Label for password inside input box -->
-            <div class="password-container">
-                <input 
-                    type="password" 
-                    id="password" 
-                    name="password" 
-                    placeholder="Password" 
-                    required>
-                <span class="toggle-password" id="togglePassword">👁️</span>
-            </div>
-
-            <button type="submit">Log in</button>
-        </form>
-    </div>
-
-    <!-- Modal HTML -->
-    <div id="myModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modalMessage"></p>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for toggle password visibility
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
-
-        togglePassword.addEventListener('click', () => {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
-        });
-    </script>
-</body>
-</html>
+                id="

